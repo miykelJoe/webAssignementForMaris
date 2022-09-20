@@ -1,0 +1,178 @@
+/* @import 'general.css'; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+:root{
+  --headerBkColor: hsl(180, 80%, 28%);
+  --buttonHover: hsl(0, 17%, 3%);
+  --headerColor: hsl(240, 9%, 87%);
+  --mainBkColor: hsl(0, 0%, 73%);
+  --contentBoxColor: hsl(0, 0%, 80%);
+  --inputBkColor: hsl(0, 0%, 98%);
+
+  /* ANIMATION */
+  --buttonTransform: scale(0.97);
+  --transition: .3s;
+}
+
+body{
+    background-color: var(--mainBkColor);
+  }
+  
+  header {
+    background-color: var(--headerBkColor);
+    width: 100%;
+    padding: 2px;
+  }
+  
+  header #navigations {  
+    display: flex;
+    font-weight: 700;
+  }
+  
+  header #navigations .logo {
+    color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: clamp(2rem, 1vw, 3rem);
+    margin: 1em 0 .5em 20%;
+  }
+
+/* Home Main CSS */
+main{
+  background-color: var(--contentBoxColor);  
+  box-shadow: 0px 0px 20px 0px var(--headerColor);
+  display: flex;
+  border-radius: 20px;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5em 4em 0;  
+}
+
+main .about__me{  
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+main .about__me #my-pics{  
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .about__me img{  
+  width: 100%;  
+  border-radius: 1em;
+  margin: 2em 1em;
+}
+
+main .about__me #header{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;  
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+}
+
+main .about__me #header h1{
+  font-size: clamp(1.2rem, 1.6vw, 2rem);
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+
+main .about__me #header p{
+  font-size: clamp(.8rem, 1.2vw, 1.5rem);
+  text-align: center;
+  width: 85%;
+  max-width: 30em;
+  margin-bottom: 1em;
+}
+
+main .about__me #header .cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .about__me #header .cards .card{
+  background-color: var(--headerColor);
+  width: 12em;
+  padding: .6em 1.5em;
+  border-radius: 1em;
+  margin: 1.2em 1.5em;
+}
+
+main .about__me #header  .card h3{
+  color: var(--headerBkColor);
+}
+
+main .about__me #header .hobbies ul,
+main .about__me #header .priorities ul,
+main .about__me #header .other__skills ul{
+  margin: 1em 0 0 1em;
+}
+
+/* Button */
+main .btn{
+  display: flex;
+  justify-content: center;  
+  align-items: flex-end;
+  margin: 1em 0 3em;
+}
+
+main .btn button{
+  background-color: var(--headerBkColor);
+  color: var(--headerColor);
+  padding: 1.5em 2em;
+  transition: var(--transition);
+  border-radius: 1em;
+  border: none;
+  outline: none;
+}
+
+main .btn button:hover{
+  background-color: var(--buttonHover);
+  color: var(--headerColor);
+  transition: var(--transition);
+  transform: var(--buttonTransform);
+  border: none;
+  cursor: pointer;
+}
+
+footer{
+  background-color: rgb(24, 24, 24);
+  color: white;
+  display: flex;
+  margin: 3em 0em 0em;
+  padding: 2em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px){
+  header #navigations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header #navigations .logo {
+    color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: clamp(1.5rem, 1vw, 3rem);
+    margin: 1em;
+  }
+}
